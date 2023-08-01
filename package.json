@@ -1,0 +1,17 @@
+{
+  "name": "gbs-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile_main": "sass --no-source-map gbs/src/sass/main.scss gbs/static/css/base.css",
+    "watch:compile_main": "sass -w gbs/src/sass/main.scss gbs/static/css/base.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "sass": "^1.63.4"
+  }
+}

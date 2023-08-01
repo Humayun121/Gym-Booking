@@ -1,0 +1,71 @@
+
+.heading-primary{
+    //color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden; 
+    margin-bottom: 60px;
+
+    &--main {
+        display: block;
+        font-size: 60px; 
+        font-weight: 400;
+        letter-spacing: 35px;
+        color: $color-white;
+    
+        animation-name: moveInLeft;  /* From keyfreames */
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        /*
+        animation-delay:1s;
+        animation-iteration-count:3;
+        */
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 17.4px;
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+.header-animation {
+    animation-name: moveInLeft;  /* From keyfreames */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+
+.extra-info {
+    
+    background: $color-grey-dark-2;
+}
+
+
+
+
+.navbar {
+    background: $color-grey-dark-3; 
+}
+
+.top-bar {
+    
+    background: color-grey-light-2;
+}
+
+#register {
+    background-color: antiquewhite;
+    background: $color-grey-dark-2;
+}
+
+#login {
+    height: 40rem;
+    background: $color-grey-dark-2;
+
+    &_body {
+        height: 60rem;
+    }
+}

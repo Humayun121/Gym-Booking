@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="showcase-Inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="display-4">User Dashboard</h1>
+          <p class="lead">BOOKING</p>
+          <!-- Welcome message to a specific user -->
+          <h2>Welcome {{ user.first_name }}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> Dashboard</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+<form  method="POST" action="{% url 'new_booking_session_manager' %}" > 
+  {% csrf_token %}
+  <label for="role">Role:</label>
+
+  <!-- List the role available for user -->
+  <select name="role_id" id="role_id">  
+    {% for member_role in member_roles %}
+      <option value="{{ member_role.role.id }}">{{ member_role.role.name }}</option>
+    {% endfor %}
+  </select>
+  <!-- List available dates -->
+  <label for="date">Choose a day:</label>
+  <select name="date" id="date">
+    <!-- Iterates over all the available dates -->
+    {% for date in dates_options %} 
+      <option value="{{ date }}">{{ date }}</option>
+    {% endfor %}
+  </select>
+  <button class="favorite styled" type="submit"> Apply </button>
+</form>
+    
+{% endblock %}

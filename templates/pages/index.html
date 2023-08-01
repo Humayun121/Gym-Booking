@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Homepage -->
+<header id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-5">
+        <div class="overlay p-5">
+          <h1 class="heading-primary display-4 mb-4">
+            <span class="heading-primary--main"> Welcome to the Gym </span>
+            <span class="heading-primary--sub"> test </span>
+          </h1>
+
+          <p class="lead">Login to book a session</p>
+          <p class="lead">After signing up go to the membership page</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-video">
+      <h2>456</h2>
+      <video class="bg-video__content" autoplay muted loop>
+        <h2>549</h2>
+          <source src="{% static 'pages/img/video.mp4' %}" type="video/mp4">
+          <source src="{% static 'pages/img/video.webm' %}" type="video/webm">
+          Your browser is not supported!
+      </video>
+  </div>
+</header>
+
+  <section id="" class="extra-info text-white ">
+  <!--<section id="services" class=" py-5 bg-secondary text-white "></section>-->
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="fas fa-comment fa-4x mr-4"></i>
+          <hr>
+          <h3>Consulting Services</h3>
+          <p>All members of staff are friendly and will gladly help give any 
+              consultations if required
+          </p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-home fa-4x mr-4"></i>
+          <hr>
+          <h3>Different Locations</h3>
+          <p>We are located in different areas of London. Poplar, Mile end, Barking, Whitchapel, Limehouse
+              and many more
+          </p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-suitcase fa-4x mr-4"></i>
+          <hr>
+          <h3>Personal Trainers</h3>
+          <p>In the gym there are qualified PT's who will help make a fitness and a diet plan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

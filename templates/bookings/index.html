@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="showcase-Inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class=" header-animation display-4">Select Membership</h1>
+          <p class="lead">Quick And Easy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> Browse Membership</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" class="py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Iterates over all the roles from the use of the context 'myroles' -->
+        {% if myroles %} 
+          {% for role in myroles %}
+            <!-- Role-->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card listing-preview">
+                <div class="card-body">
+                  <div class="listing-heading text-center">
+                    <h4 class="text-primary">{{ role.name }}</h4>
+                    <hr>
+                    <a href="{% url 'role_add' role.id %}" class="btn btn-primary btn-block">ADD</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+      <div class="col-md-12">
+          <p>No Roles Available </p>
+      </div>
+    {% endif %}
+</div>       
+  </div>
+</div>
+</div>
+</section>
+{% endblock %}
+
+
