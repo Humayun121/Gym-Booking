@@ -80,7 +80,7 @@ img {
     left: 0;
     min-height: 100%;
     width: 100%;
-    background: $color-grey-dark-2;
+    background: $color-grey-dark;
     //background: rgba(32, 134, 107, 0.8);
 }
 
@@ -95,6 +95,10 @@ img {
 
 #work {
     padding: 6rem 0;
+}
+
+#Work {
+    padding: 2rem 0;
 }
 
 .listing-preview a {

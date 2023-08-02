@@ -48,12 +48,12 @@
 
 
 .navbar {
-    background: $color-grey-dark-3; 
+    background: $color-black; 
 }
 
 .top-bar {
     
-    background: color-grey-light-2;
+    background: $color-grey-light-2;
 }
 
 #register {
@@ -68,4 +68,8 @@
     &_body {
         height: 60rem;
     }
+}
+
+.text-display {
+    list-style: none;
 }
