@@ -273,6 +273,10 @@
   font-size: 3em;
 }
 
+.fa-3-5x {
+  font-size: 3.5em;
+}
+
 .fa-4x {
   font-size: 4em;
 }
@@ -5370,6 +5374,11 @@ img {
   min-height: 100%;
   width: 100%;
   background: #282828;
+}
+
+.heading-primary--sub {
+  margin-top: 5rem;
+  font-size: 1.5rem;
 }
 
 .bg-Dark {

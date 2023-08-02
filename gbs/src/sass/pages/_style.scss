@@ -39,6 +39,8 @@ img {
     background-image: url(img/showcase1.jpg);
     background-position: top;
     background-size: cover;
+
+
 }
 
 #showcase .home-search {
@@ -94,6 +96,12 @@ img {
     width: 100%;
     background: $color-grey-dark;
     //background: rgba(32, 134, 107, 0.8);
+}
+
+.heading-primary--sub {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    
 }
 
 
