@@ -54,6 +54,8 @@
 .top-bar {
     
     background: $color-grey-light-2;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #register {
