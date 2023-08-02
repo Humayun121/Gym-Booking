@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <section id="showcase-Inner" class="py-5 text-white">
@@ -34,88 +35,69 @@
       <div class="cards">
           <div class="cards__side cards__side--front">
               <div class="cards__picture cards__picture--1">
-                  &nbsp;
+                <img src="{% static 'pages/img/gym.png' %}" alt="">
               </div>
+
               <h4 class="cards__heading">
                   <span class="cards__heading-span cards__heading-span--1">GYM</span>
               </h4>
-              <div class="cards__details">
-                  <ul>
-                      <li>3 day tours</li>
-                      <li>Up to 30 people</li>
-                      <li>2 tour guides</li>
-                      <li>Sleep in cozy hotels</li>
-                      <li>Difficulty: easy</li>
-                  </ul>
-              </div>
-
           </div>
           <div class="cards__side cards__side--back cards__side--back-1">
               <div class="cards__cta">
-                  <div class="cards__price-box">
-                      <p class="cards__price-only">Only</p>
-                      <p class="cards__price-value">£297</p>
-                  </div> 
-                  <a href="#popup" class="btn btn--white">Book now!</a>
+                <div class="cards__details">
+                  <ul>
+                      <li>8 Squat Rack</li>
+                      <li>Dumbbells 2kg-70kg</li>
+                      <li>5 Cablw Machine</li>
+                      <li>25 Treadmill</li>
+                      <li>5 Smith Machine</li>
+                  </ul>
+                </div>    
               </div>
           </div>
         </div>
 
-        <div class="cards">
-          <div class="cards__side cards__side--front">
-              <div class="cards__picture cards__picture--1">
-                  &nbsp;
-              </div>
-              <h4 class="cards__heading">
-                  <span class="cards__heading-span cards__heading-span--1">BOXING</span>
-              </h4>
-              <div class="cards__details">
-                  <ul>
-                      <li>3 day tours</li>
-                      <li>Up to 30 people</li>
-                      <li>2 tour guides</li>
-                      <li>Sleep in cozy hotels</li>
-                      <li>Difficulty: easy</li>
-                  </ul>
-              </div>
-
+      <div class="cards">
+        <div class="cards__side cards__side--front">
+          <div class="cards__picture cards__picture--1">
+            <img src="{% static 'pages/img/boxing.jpg' %}" alt="">
           </div>
-          <div class="cards__side cards__side--back cards__side--back-1">
-              <div class="cards__cta">
-                  <div class="cards__price-box">
-                      <p class="cards__price-only">Only</p>
-                      <p class="cards__price-value">£297</p>
-                  </div> 
-                  <a href="#popup" class="btn btn--white">Book now!</a>
-              </div>
-          </div>
+          <h4 class="cards__heading">
+              <span class="cards__heading-span cards__heading-span--1">BOXING</span>
+          </h4>
+          
+        </div>
+        <div class="cards__side cards__side--back cards__side--back-1">
+          <div class="cards__details">
+            <ul>
+              <li>20 Heavy Boxing Bags</li>
+              <li>20 Light Boxing Bags</li>
+              <li>10 Refllex Bags</li>
+              <li>10 Speed Bags</li>
+              <li>5 Boxing Rings</li>
+            </ul>
+        </div>
+      </div>
         </div>
         <div class="cards">
           <div class="cards__side cards__side--front">
-              <div class="cards__picture cards__picture--1">
-                  &nbsp;
+              <div class="cards__picture cards__picture--3">
+                <img src="{% static 'pages/img/swimming.jpg' %}" class="cards__picture--3__pic-3" alt="">
               </div>
               <h4 class="cards__heading">
                   <span class="cards__heading-span cards__heading-span--1">SWIMMING</span>
               </h4>
-              <div class="cards__details">
-                  <ul>
-                      <li>3 day tours</li>
-                      <li>Up to 30 people</li>
-                      <li>2 tour guides</li>
-                      <li>Sleep in cozy hotels</li>
-                      <li>Difficulty: easy</li>
-                  </ul>
-              </div>
-
           </div>
           <div class="cards__side cards__side--back cards__side--back-1">
               <div class="cards__cta">
-                  <div class="cards__price-box">
-                      <p class="cards__price-only">Only</p>
-                      <p class="cards__price-value">£297</p>
-                  </div> 
-                  <a href="#popup" class="btn btn--white">Book now!</a>
+                <div class="cards__details">
+                  <ul>
+                      <li>7 Swimming Pools</li>
+                      <li>20 Shower Rooms</li>
+                      <li>5 Separate Swimming Pools</li>
+                      <li>2 Kids Swimming Pools</li>
+                  </ul>
+              </div>
               </div>
           </div>
         </div>
@@ -127,7 +109,7 @@
 
 
   <!-- Work -->
-  <section id="work" class="bg-dark text-white text-center">
+  <section id="work" class="bg-Dark text-white text-center">
     <h2 class="display-4 ">GYM RULES</h2>
     <h4>
       <ul>
