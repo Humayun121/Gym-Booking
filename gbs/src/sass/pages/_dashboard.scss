@@ -1,0 +1,30 @@
+ .booking {
+
+
+    &-form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        &__roles {
+            display: flex;
+            flex-direction: column;
+
+            &-name{
+                
+                  
+            }
+        }
+    
+
+        &__dates {
+            display: flex;
+            flex-direction: column;
+        }
+    
+    }
+    
+    
+
+    
+
+ }

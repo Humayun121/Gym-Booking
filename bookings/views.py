@@ -82,6 +82,7 @@ def new_booking_session_manager(request):
             date, '%d %b %Y').strftime('%Y%m%d')
 
         return redirect(reverse('new_booking', args=[role_id, selected_date_time]))
+    
 
 
 def index(request):

@@ -29,25 +29,32 @@
     </div>
   </section>
 
-<form  method="POST" action="{% url 'new_booking_session_manager' %}" > 
-  {% csrf_token %}
-  <label for="role">Role:</label>
+<div class="booking">
+  
+  <form  method="POST" action="{% url 'new_booking_session_manager' %}" class="booking-form"> 
+    {% csrf_token %}
+    <div class="booking-form__roles">
+      <label for="role" class="booking__roles-name">Role:</label>
 
-  <!-- List the role available for user -->
-  <select name="role_id" id="role_id">  
-    {% for member_role in member_roles %}
-      <option value="{{ member_role.role.id }}">{{ member_role.role.name }}</option>
-    {% endfor %}
-  </select>
-  <!-- List available dates -->
-  <label for="date">Choose a day:</label>
-  <select name="date" id="date">
-    <!-- Iterates over all the available dates -->
-    {% for date in dates_options %} 
-      <option value="{{ date }}">{{ date }}</option>
-    {% endfor %}
-  </select>
-  <button class="favorite styled" type="submit"> Apply </button>
-</form>
+      <!-- List the role available for user -->
+      <select name="role_id" id="role_id">  
+        {% for member_role in member_roles %}
+          <option value="{{ member_role.role.id }}">{{ member_role.role.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <!-- List available dates -->
+    <div class="booking-form__dates">
+      <label for="date">Choose a day:</label>
+      <select name="date" id="date">
+        <!-- Iterates over all the available dates -->
+        {% for date in dates_options %} 
+          <option value="{{ date }}">{{ date }}</option>
+        {% endfor %}
+      </select>
+      <button class="favorite styled" type="submit"> Apply </button>
+    </div>
+  </form>
+</div>
     
 {% endblock %}
