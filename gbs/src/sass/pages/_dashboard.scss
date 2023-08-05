@@ -19,6 +19,52 @@
         &__dates {
             display: flex;
             flex-direction: column;
+
+            &__btn {
+                margin-top: 1.5rem;
+                margin-right: 40rem;
+
+                text-transform: uppercase;
+                text-decoration: none;
+
+                animation: moveInBottom .5s ease-out;
+                animation-delay: .2s;
+                animation-fill-mode: backwards;
+
+                background-color: $color-grey-dark-2;
+                color: $color-white;
+               
+                display: inline-block;
+                border-radius: 100px;  /* Shape of the button */
+                transition: all .2s; /* animate */
+                position: relative;
+                padding: 10px 60px;
+
+                
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 5px 10px rgba($color-black,.2) ;  /* 0=x 5=y 10=blur   .2=20%opacity */
+            
+                    &::after {
+                        transform: scaleX(1.4) scaleY(1.6);
+                        opacity: 0;
+                    }
+                }
+
+                &:active, /* Once clicked */
+                &:focus {  
+                    outline: none;
+                    transform: translateY(-1px);
+                    box-shadow: 0 .5rem 1rem  rgba($color-black,.2);
+                }
+                
+                
+                
+                
+            }
         }
     
     }

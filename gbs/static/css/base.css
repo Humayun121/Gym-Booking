@@ -127,6 +127,37 @@
   display: flex;
   flex-direction: column;
 }
+.booking-form__dates__btn {
+  margin-top: 1.5rem;
+  margin-right: 40rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  animation: moveInBottom 0.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+  background-color: #181818;
+  color: #fff;
+  display: inline-block;
+  border-radius: 100px; /* Shape of the button */
+  transition: all 0.2s; /* animate */
+  position: relative;
+  padding: 10px 60px;
+  border: none;
+  cursor: pointer;
+}
+.booking-form__dates__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* 0=x 5=y 10=blur   .2=20%opacity */
+}
+.booking-form__dates__btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.booking-form__dates__btn:active, .booking-form__dates__btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
 
 .col-1-of-3 {
   display: flex;
