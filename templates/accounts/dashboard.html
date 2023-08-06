@@ -32,12 +32,12 @@
 <div class="booking">
   
   <form  method="POST" action="{% url 'new_booking_session_manager' %}" class="booking-form"> 
-    {% csrf_token %}
+    {% csrf_token %} 
     <div class="booking-form__roles">
-      <label for="role" class="booking__roles-name">Role:</label>
+      <label for="role" class="booking-form__roles-name__1">Role:</label>
 
       <!-- List the role available for user -->
-      <select name="role_id" id="role_id">  
+      <select name="role_id" id="role_id" class="booking-form__roles-membership">  
         {% for member_role in member_roles %}
           <option value="{{ member_role.role.id }}">{{ member_role.role.name }}</option>
         {% endfor %}
@@ -45,8 +45,8 @@
     </div>
     <!-- List available dates -->
     <div class="booking-form__dates">
-      <label for="date">Choose a day:</label>
-      <select name="date" id="date">
+      <label for="date" class="booking-form__dates-name__2">Choose a day:</label>
+      <select name="date" id="date" class="booking-form__dates-date">
         <!-- Iterates over all the available dates -->
         {% for date in dates_options %} 
           <option value="{{ date }}">{{ date }}</option>

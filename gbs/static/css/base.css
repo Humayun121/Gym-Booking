@@ -142,20 +142,56 @@
 
 .booking-form {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 .booking-form__roles {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.booking-form__roles-name__1 {
+  position: absolute;
+  margin-left: 48rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+}
+.booking-form__roles-membership {
+  position: relative;
+  margin-left: 41rem;
+  margin-top: 7rem;
+  width: 20%;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border: 2px black solid;
 }
 .booking-form__dates {
   display: flex;
   flex-direction: column;
 }
+.booking-form__dates-name__2 {
+  position: absolute;
+  margin-left: 44rem;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+}
+.booking-form__dates-date {
+  margin-top: 5rem;
+  position: relative;
+  margin-left: 41rem;
+  width: 20%;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border: 2px black solid;
+}
 .booking-form__dates__btn {
-  margin-top: 1.5rem;
-  margin-right: 40rem;
+  margin-top: 2rem;
+  margin-left: 36rem;
+  width: 30%;
   text-transform: uppercase;
   text-decoration: none;
   animation: moveInBottom 0.5s ease-out;
