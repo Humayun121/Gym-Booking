@@ -2,20 +2,21 @@
 
 {% block content %}
 
-
-<form method="POST" action="{% url 'new_booking' role_id booking_date %}">
-    {% csrf_token %}
-    <lebel for="date_time">Time:</lebel>
-    <select name="date_time" id="date_time">
-        <!-- Available  time slots  -->
-        {% for date_time in booking_dt_options %}
-            <option value="{{ date_time | date:'Y m d H' }}">{{ date_time }}</option>
-        {% endfor %}
-    </select>
-    
-    <input name="role_id" value="{{ role_id }}" type="hidden" /> 
-    <button class="favorite styled booking-form__dates__btn" type="submit"> Book </button>
-</form>
+<div class="book">
+    <form method="POST" action="{% url 'new_booking' role_id booking_date %}" class="book-form">
+        {% csrf_token %}
+        <lebel for="date_time" class="book-form__title">Time</lebel>
+        <select name="date_time" id="date_time" class="book-form__date_time">
+            <!-- Available  time slots  -->
+            {% for date_time in booking_dt_options %}
+                <option value="{{ date_time | date:'Y m d H' }}">{{ date_time }}</option>
+            {% endfor %}
+        </select>
+        
+        <input name="role_id" value="{{ role_id }}" type="hidden" /> 
+        <button class="book-form__btn booking-form__dates__btn " type="submit"> Book </button>
+    </form>
+</div>
 
 
 {% endblock %}
